@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="home.css">
+    
+</head>
+
+<body>
+    <div class="container"> 
+        <div class="top-layer">
+            <div class="logo"> 
+                <img src="images/logo.jpg" width="40" height="40">
+                <h2>NAMASTE</h2>
+            </div>
+            <nav>
+                <a href="home.html">Home</a> |
+                <a href="classes.html">Classes</a> |
+                <a href="teachers.html">Our teachers</a> |
+                <a href="schedule.html">Schedule</a> |
+                <a href="contactus.html">Contact us</a> 
+            </nav>
+        </div> 
+
+        <div class="title" >
+            <h1>WELCOME HOME LOVE</h1>  
+            <p>Find Your Inner Peace</p>
+        </div>
+
+        <div class="row-pic"> 
+            <div><img src="images/pexels-polina-kovaleva-6019787.jpg" height="100%" width="100%"></div>
+            <div><img src="images/pic6.jpg" width="100%" height="100%" ></div>
+            <div><img src="images/pic7.jpg"width="100%" height="100%" ></div>
+        </div>
+        
+        <div class="details"> 
+            <div>Special price</div>
+            <div id="price1"><p>TRIDAL CLASS</p><p>25$</p></div>
+            <div id="price2"><p>MEDITATION</p><p>35$</p></div>
+            <div id="price3"><p>RETRET</p><p>320$</p></div> 
+        </div>
+        
+        <div class="about-us"> 
+            <div>
+                <h1>OUR STUDIO<br>YOGA</h1>
+                <p>Welcome to Namaste Yoga Studio, where we offer a sanctuary for mind, body, and spirit. Our studio is dedicated to providing a serene space for you to explore the benefits of yoga practice. With a focus on wellness and balance, we aim to guide you on a journey towards inner peace and physical vitality. Join us to discover the transformative power of yoga in a welcoming and inclusive environment.</p>
+            </div>
+            <div><img src="images/yogastudio.jpeg" width="100%" height="100%"></div>
+        </div>
+
+        <div class="contact-us ">
+            <h1>CONTACT US</h1>
+            <div class="info">
+                <div>
+                    <p>1234-5678-90<br><br>
+                    info@gmail.com</p>
+                </div>
+                <div>
+                    <p>AM ISRAEL HAY ,Washington</p>
+                </div>
+              
+            </div>
+            <div class="email">
+                <div class="div1"></div>
+
+                <div class="div2">
+                    <p>Stay Connect With US</p>
+                    <p>Enter Your Email Here * </p>
+                    <div class="box">
+                    <label for="email"></label>
+                    <input type="text" id="txt1" name="email" required>
+                    <button type="submit" id="btn1" >Subscribe</button>
+                    <div class="error-message" id="error-message"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        document.getElementById("btn1").onclick = function () {
+            var emailInput = document.getElementById("txt1").value;
+            var errorMessage = document.getElementById("error-message");
+        
+           
+            var emailPattern = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6}$/;
+        
+            if (emailPattern.test(emailInput)) {
+              
+                window.location.href = "thanku.html"; 
+            } else {
+                
+                errorMessage.textContent = "Please enter a valid email address.";
+                errorMessage.style.color = "red";
+            }
+        };
+        </script>
+
+</body>
